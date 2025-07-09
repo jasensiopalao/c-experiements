@@ -1,7 +1,8 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
-#include <format>
+#include <format>  // New header in C++20
+#include <print>  // New header in C++23
 #include <chrono>
 
 /*
@@ -51,6 +52,8 @@ int main() {
 
     std::cout << "std::format result: " << formatted_fmt << std::endl;
     std::cout << "Execution time: " << duration_fmt.count() << " seconds" << std::endl;
+
+    std::print("Integer: {}, Float: {:.2f}", value, pi);
 
     return 0;
 }
